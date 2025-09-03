@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.21"
+    application // <- ADICIONADO
 }
 
 group = "org.example"
@@ -15,4 +16,9 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+// <- ADICIONADO
+application {
+    mainClass.set("MainKt") // Nome da classe gerada automaticamente pelo Kotlin se sua função main está fora de classe
 }
